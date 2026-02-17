@@ -6,14 +6,14 @@
 $font_family: "Hanken Grotesk", sans-serif;
 
 $presets: (
-    1: (var.$font_family, func.to_rem(72), 800, 1, 0),
-    2: (var.$font_family, func.to_rem(56), 800, 1, 0),
-    3: (var.$font_family, func.to_rem(32), 700, 1.3, 0),
-    4: (var.$font_family, func.to_rem(24), 700, 1.3, 0),
-    "5--bold": (var.$font_family, func.to_rem(18), 700, 1.3, 0),
-    "5--medium": (var.$font_family, func.to_rem(18), 500, 1.3, 0),
-    "6--bold": (var.$font_family, func.to_rem(16), 700, 1.3, 0),
-    "6--medium": (var.$font_family, func.to_rem(16), 500, 1.3, 0),
+    1: ($font_family, func.to_rem(72), 800, 1, 0),
+    2: ($font_family, func.to_rem(56), 800, 1, 0),
+    3: ($font_family, func.to_rem(32), 700, 1.3, 0),
+    4: ($font_family, func.to_rem(24), 700, 1.3, 0),
+    "5--bold": ($font_family, func.to_rem(18), 700, 1.3, 0),
+    "5--medium": ($font_family, func.to_rem(18), 500, 1.3, 0),
+    "6--bold": ($font_family, func.to_rem(16), 700, 1.3, 0),
+    "6--medium": ($font_family, func.to_rem(16), 500, 1.3, 0),
 );
 
 @each $key, $value in $presets { .text_preset_#{$key} { @include mix.typography($value... ) }; }

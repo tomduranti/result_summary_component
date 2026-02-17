@@ -9,7 +9,6 @@
     font-weight: $font_weight;
     line-height: $line_height;
     letter-spacing: $letter_spacing;
-    color: $color;
 }
 
 @mixin transition($time, $mode, $prop...) {
