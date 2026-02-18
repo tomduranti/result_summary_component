@@ -1,4 +1,4 @@
-import SingularScoreForm from './SingularScoreForm';
+import SingularScoreForm from './SingularScoreForm.jsx';
 import MemoryIcon from '../../../assets/MemoryIcon.jsx';
 import ReactionIcon from '../../../assets/ReactionIcon.jsx';
 import VerbalIcon from '../../../assets/VerbalIcon.jsx';

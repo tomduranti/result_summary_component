@@ -1,0 +1,17 @@
+@use "../../../sass/abstract/variables" as var;
+@use "sass:map";
+
+.summary_section {
+    max-inline-size: calc(map.get(var.$spacing, 80) * 4 - map.get(var.$special_spacing, 5));
+
+    display: flex;
+    flex-direction: column;
+    gap: map.get(var.$spacing, 24);
+
+    margin-inline: auto;
+
+    &__header {
+        color: var.$navy--950;
+        text-transform: capitalize;
+    } 
+}

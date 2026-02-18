@@ -3,17 +3,33 @@
 @use "sass:map";
 
 .button {
+    position: relative;
+
     text-transform: capitalize;
 
     background: var.$navy--950;
     color: var.$white;
 
-    padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$spacing, 8));
+    padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 1) / 2);
     border-radius: 128px;
 
     inline-size: 100%;
 
-    &:hover {
+    z-index: 1;
+
+    &::after {
         background: var.$gradient_1;
+        @include mix.transition(.3s, ease-in-out, opacity);
+        opacity: 0;
+        position: absolute;
+        content: "";
+        display: block;
+        inset: 0;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    &:hover::after {
+        opacity: 1;
     }
 }

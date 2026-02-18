@@ -7,8 +7,8 @@
     display: flex;
     justify-content: space-between;
 
-    padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 1) / 2);
-    padding-inline: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) + map.get(var.$special_spacing, 1));
+    padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 1) + map.get(var.$special_spacing, 1) / 2);
+    padding-inline: map.get(var.$spacing, 16);
 
     border-radius: func.to_rem(12);
 
