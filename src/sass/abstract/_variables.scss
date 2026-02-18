@@ -5,6 +5,7 @@ $white: hsl(0deg, 100%, 100%);
 $black: hsl(0deg, 0%, 0%);
 
 $navy--950: hsl(224deg, 30%, 27%);
+$navy--950opq: hsl(224deg, 30%, 27%, 50%);
 $navy--200: hsl(241deg, 100%, 89%);
 $navy--50: hsl(221deg, 100%, 96%);
 
@@ -20,7 +21,7 @@ $red--50: hsl(0deg, 100%, 98%);
 $green--500: hsl(166deg, 100%, 37%);
 $green--50: hsl(162deg, 63%, 97%);
 
-$gradient_1: linear-gradient(to bottom, hsl(256deg 71% 46% / 0), hsl(241deg 72% 46% / 0));
+$gradient_1: linear-gradient(180deg,rgba(119, 85, 255, 1) 0%, rgba(47, 44, 233, 1) 100%);
 $gradient_2: linear-gradient(to top, hsl(252deg 100% 67% / 0), hsl(241deg 81% 54% / 0));
 
 //SPACING
@@ -31,4 +32,9 @@ $spacing: (
   24:  func.to_rem(24), 
   32:  func.to_rem(32),
   80:  func.to_rem(80),
+);
+
+$special_spacing: (
+  1: func.to_rem(1),
+  2: func.to_rem(2),
 );

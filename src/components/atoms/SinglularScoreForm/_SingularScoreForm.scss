@@ -1,0 +1,47 @@
+@use "../../../sass/abstract/variables" as var;
+@use "../../../sass/abstract/functions" as func;
+@use "sass:map";
+@use "sass:list";
+
+.singular_score_form {
+    display: flex;
+    justify-content: space-between;
+
+    padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 1) / 2);
+    padding-inline: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) + map.get(var.$special_spacing, 1));
+
+    border-radius: func.to_rem(12);
+
+    &__image {
+        margin-inline-end: map.get(var.$spacing, 16);
+    }
+
+    &__score {
+        color: var.$navy--950;
+        margin-inline-end: map.get(var.$spacing, 8);
+    }
+
+    &__compare {
+        color: var.$navy--950opq;
+    }
+}
+
+$score_forms: (
+    //classname: (background-color, color)
+    "reaction": (var.$red--50, var.$red--400),
+    "memory": (var.$yellow--50, var.$yellow--400),
+    "verbal": (var.$green--50, var.$green--500),
+    "visual": (var.$blue--50, var.$blue--800),
+);
+
+@each $key, $value in $score_forms {
+    .singular_score_form--#{$key} {
+        background-color: list.nth($value, 1);
+        color: list.nth($value, 2);
+    }
+}
+
+svg {
+    vertical-align: text-top;
+    margin-inline-end: map.get(var.$spacing, 16);
+}
