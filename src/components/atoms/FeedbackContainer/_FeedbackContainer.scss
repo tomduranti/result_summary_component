@@ -1,0 +1,16 @@
+@use "../../../sass/abstract/variables" as var;
+@use "sass:map";
+
+.feedback_container {
+    text-align: center;
+
+    &__intro {
+        margin-block-end: map.get(var.$spacing, 8);
+        text-transform: capitalize;
+        color: var.$white;
+    }
+
+    &__paragraph {
+        color: var.$navy--200;
+    }
+}

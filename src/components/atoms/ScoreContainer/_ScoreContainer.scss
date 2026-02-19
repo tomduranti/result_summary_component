@@ -1,17 +1,22 @@
 @use "../../../sass/abstract/variables" as var;
-@use "../../../sass/abstract/mixins" as mix;
 @use "sass:map";
 
 .score_container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background: var.$gradient_1;
     border-radius: 4.375rem;
+    padding: calc(map.get(var.$spacing, 32) - map.get(var.$special_spacing, 1) / 2) calc(map.get(var.$spacing, 32) + map.get(var.$special_spacing, 5) + map.get(var.$special_spacing, 1) + map.get(var.$special_spacing, 1) / 2);
     
+    max-inline-size: calc(map.get(var.$spacing, 24) * 6 - map.get(var.$special_spacing, 2) * 2);
+
     &__score {
         color: var.$white;
     }
 
     &__compare {
-        color: var.$navy--200;
+        color: var.$navy--200opq;
     }
 }
