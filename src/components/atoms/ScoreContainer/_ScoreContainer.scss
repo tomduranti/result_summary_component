@@ -1,0 +1,17 @@
+@use "../../../sass/abstract/variables" as var;
+@use "../../../sass/abstract/mixins" as mix;
+@use "sass:map";
+
+.score_container {
+    display: inline-block;
+    background: var.$gradient_1;
+    border-radius: 4.375rem;
+    
+    &__score {
+        color: var.$white;
+    }
+
+    &__compare {
+        color: var.$navy--200;
+    }
+}
