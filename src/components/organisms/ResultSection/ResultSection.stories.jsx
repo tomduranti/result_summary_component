@@ -9,13 +9,13 @@ export default {
 }
 
 export const Default = {
-    render: () => {
+    render: () => (
         <div className="result_section">
-            <div className="result_content">
-                <h2 className="result_content__heading">your result</h2>
+            <div className="result_section__content">
+                <h2 className="result_section__heading text_preset_5--bold">your result</h2>
                 <ScoreContainer />
                 <FeedbackContainer />
             </div>
         </div>
-    }
+    )
 } 

@@ -2,19 +2,26 @@
 @use "sass:map";
 
 .result_section {
-    background-color: var.$gradient_2;
+    background: var.$gradient_2;
+
+    border-end-end-radius: map.get(var.$spacing, 32);
+    border-end-start-radius: map.get(var.$spacing, 32);
+
+    padding-block: map.get(var.$spacing, 32);
 
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-self: center;
         gap: map.get(var.$spacing, 24);
+
+        margin-inline: auto;
 
         max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) * 2);
     }
 
     &__heading {
+        text-transform: capitalize;
         color: var.$navy--200;
     }
 }
