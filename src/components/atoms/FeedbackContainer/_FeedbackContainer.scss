@@ -3,6 +3,7 @@
 
 .feedback_container {
     text-align: center;
+    max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) * 2);
 
     &__intro {
         margin-block-end: map.get(var.$spacing, 8);
