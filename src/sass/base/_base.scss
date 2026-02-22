@@ -1,0 +1,11 @@
+@use "../abstract/variables" as var;
+@use "sass:map";
+
+.result_container {
+    display: flex;
+    flex-direction: column;
+
+    gap: map.get(var.$spacing, 24);
+
+    margin-block-end: calc(map.get(var.$spacing, 32) - map.get(var.$special_spacing, 2));
+}
