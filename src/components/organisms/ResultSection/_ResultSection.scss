@@ -8,15 +8,12 @@
     border-end-end-radius: map.get(var.$spacing, 32);
     border-end-start-radius: map.get(var.$spacing, 32);
 
-    padding-block: map.get(var.$spacing, 32);
+    padding: map.get(var.$spacing, 32) calc(map.get(var.$spacing, 32) + map.get(var.$spacing, 24) + map.get(var.$special_spacing, 1) + map.get(var.$special_spacing, 1) / 2);
 
     @include mix.respond_to(min, m_screen) {
-        max-inline-size: calc(map.get(var.$spacing, 80) * 4 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2));
-        inline-size: 100%;
-
+        padding: calc(map.get(var.$spacing, 32) + map.get(var.$spacing, 8) + map.get(var.$special_spacing, 5)) calc(map.get(var.$spacing, 32) * 2 + map.get(var.$special_spacing, 5));
         border-start-start-radius: map.get(var.$spacing, 32);
         border-start-end-radius: map.get(var.$spacing, 32);
-
     }
 
     &__content {
@@ -27,7 +24,7 @@
 
         margin-inline: auto;
 
-        max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) * 2);
+        max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 4));
 
         @include mix.respond_to(min, m_screen) {
             max-inline-size: calc(map.get(var.$spacing, 80) * 2 + map.get(var.$spacing, 32) + map.get(var.$spacing, 8));
