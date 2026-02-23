@@ -1,4 +1,5 @@
 @use "../../../sass/abstract/variables" as var;
+@use "../../../sass/abstract/mixins" as mix;
 @use "sass:map";
 
 .result_section {
@@ -9,6 +10,15 @@
 
     padding-block: map.get(var.$spacing, 32);
 
+    @include mix.respond_to(min, m_screen) {
+        max-inline-size: calc(map.get(var.$spacing, 80) * 4 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2));
+        inline-size: 100%;
+
+        border-start-start-radius: map.get(var.$spacing, 32);
+        border-start-end-radius: map.get(var.$spacing, 32);
+
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -18,6 +28,10 @@
         margin-inline: auto;
 
         max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) * 2);
+
+        @include mix.respond_to(min, m_screen) {
+            max-inline-size: calc(map.get(var.$spacing, 80) * 2 + map.get(var.$spacing, 32) + map.get(var.$spacing, 8));
+        }
     }
 
     &__heading {
