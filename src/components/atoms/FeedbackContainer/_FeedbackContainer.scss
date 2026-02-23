@@ -1,17 +1,28 @@
 @use "../../../sass/abstract/variables" as var;
+@use "../../../sass/abstract/mixins" as mix;
+@use "../../../sass/abstract/functions" as func;
 @use "sass:map";
 
 .feedback_container {
     text-align: center;
-    max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 2) * 2);
+    max-inline-size: calc(map.get(var.$spacing, 80) * 3 + map.get(var.$spacing, 16) + map.get(var.$special_spacing, 4));
 
     &__intro {
         margin-block-end: map.get(var.$spacing, 8);
         text-transform: capitalize;
         color: var.$white;
+
+        @include mix.respond_to(min, m_screen) {
+            margin-block-end: map.get(var.$spacing, 16);
+            font-size: func.to_rem(32);
+        }
     }
 
     &__paragraph {
         color: var.$navy--200;
+
+        @include mix.respond_to(min, m_screen) {
+            font-size: func.to_rem(18);
+        }
     }
 }

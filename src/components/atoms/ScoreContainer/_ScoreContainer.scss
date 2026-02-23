@@ -1,4 +1,5 @@
 @use "../../../sass/abstract/variables" as var;
+@use "../../../sass/abstract/functions" as func;
 @use "../../../sass/abstract/mixins" as mix;
 @use "sass:map";
 
@@ -21,9 +22,17 @@
 
     &__score {
         color: var.$white;
+
+        @include mix.respond_to(min, m_screen) {
+            font-size: func.to_rem(72);
+        }
     }
 
     &__compare {
         color: var.$navy--200opq;
+
+        @include mix.respond_to(min, m_screen) {
+            font-size: func.to_rem(18);
+        }
     }
 }
