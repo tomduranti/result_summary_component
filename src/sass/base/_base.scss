@@ -28,4 +28,8 @@ body {
         flex-direction: row;
         inline-size: 42.875rem; //necessary to fight fit-content of body, otherwise it shrinks
     }
+
+    @include mix.respond_to(min, l_screen) {
+        inline-size: 46rem; //necessary to fight fit-content of body, otherwise it shrinks
+    }
 }

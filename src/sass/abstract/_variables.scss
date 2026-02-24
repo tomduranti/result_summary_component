@@ -1,4 +1,5 @@
 @use "./functions" as func;
+@use "sass:map";
 
 //COLORS
 $white: hsl(0deg, 100%, 100%);
@@ -42,3 +43,42 @@ $special_spacing: (
   4: func.to_rem(4),
   5: func.to_rem(5),
 );
+
+//Gap
+$gap_section: map.get($spacing, 24);
+$gap_section_m_screen: map.get($spacing, 32);
+$gap_list_item: map.get($spacing, 16);
+
+//Padding for elements
+$padding_element_block: calc(map.get($spacing, 16) + map.get($special_spacing, 1) / 2);
+$padding_element_block_2: calc(map.get($spacing, 16) + map.get($special_spacing, 1) * 1.5);
+$padding_element_inline: map.get($spacing, 16);
+
+//Padding for sections
+$padding_section: map.get($spacing, 32);
+$padding_section_inline: calc(map.get($spacing, 32) + map.get($spacing, 24) + map.get($special_spacing, 1) * 1.5);
+$padding_section_block_l_screen: calc(map.get($spacing, 32) + map.get($spacing, 8) + map.get($special_spacing, 5));
+$padding_section_inline_l_screen: calc(map.get($spacing, 32) * 2 + map.get($special_spacing, 5));
+$padding_section_inline_l_screen_2: calc(map.get($spacing, 32) + map.get($spacing, 24) - map.get($special_spacing, 2)); 
+
+//Margin for elements
+$margin_element_inline: map.get($spacing, 8);
+$margin_element_block: map.get($spacing, 8);
+
+//Margin for containers
+$margin_content_inline: calc(map.get($spacing, 32) - map.get($special_spacing, 2));
+$margin_content_block: map.get($spacing, 24);
+$margin_content_m_screen: calc(map.get($spacing, 32) + map.get($spacing, 8) + map.get($special_spacing, 5) - map.get($special_spacing, 1) / 2);
+
+//Circle and radius
+$size_circle: calc(map.get($spacing, 80) * 2 - map.get($spacing, 16) - map.get($special_spacing, 4));
+$size_circle_m_screen: calc(map.get($spacing, 80) * 2 + map.get($spacing, 32) + map.get($spacing, 8));
+
+$size_content_m_screen: $size_circle_m_screen;
+$size_content_l_screen: calc(map.get($spacing, 80) * 3 + map.get($spacing, 16) + map.get($special_spacing, 4));
+
+$size_summary_content_m_screen: calc(map.get($spacing, 80) * 4 + map.get($spacing, 32) - map.get($special_spacing, 4));
+$size_summary_content_l_screen: calc(map.get($spacing, 80) * 3 + map.get($spacing, 16) * 4);
+
+$border_radius: map.get($spacing, 32);
+$button_radius: 128px;

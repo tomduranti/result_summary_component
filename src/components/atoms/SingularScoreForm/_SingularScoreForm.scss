@@ -8,22 +8,22 @@
     display: flex;
     justify-content: space-between;
 
-    padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 1) + map.get(var.$special_spacing, 1) / 2);
-    padding-inline: map.get(var.$spacing, 16);
+    padding-block: var.$padding_element_block_2;
+    padding-inline: var.$padding_element_inline;
 
     border-radius: func.to_rem(12);
 
     @include mix.respond_to(min, m_screen) {
-        padding-block: calc(map.get(var.$spacing, 16) + map.get(var.$special_spacing, 1) / 2);
+        padding-block: var.$padding_element_block;
     }
 
     &__image {
-        margin-inline-end: map.get(var.$spacing, 16);
+        margin-inline-end: calc(var.$margin_element_inline * 2);
     }
 
     &__score {
         color: var.$navy--950;
-        margin-inline-end: map.get(var.$spacing, 8);
+        margin-inline-end: var.$margin_element_inline;
     }
 
     &__score_summary {
@@ -61,5 +61,5 @@ $score_forms: (
 
 svg {
     vertical-align: text-top;
-    margin-inline-end: map.get(var.$spacing, 16);
+    margin-inline-end: calc(var.$margin_element_inline * 2);
 }

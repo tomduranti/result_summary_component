@@ -11,13 +11,15 @@
 
     background: var.$gradient_1;
     border-radius: 4.375rem;
-    inline-size: calc(map.get(var.$spacing, 80) * 2 - map.get(var.$spacing, 16) - map.get(var.$special_spacing, 4));
-    block-size: calc(map.get(var.$spacing, 80) * 2 - map.get(var.$spacing, 16) - map.get(var.$special_spacing, 4));
+
+    inline-size: var.$size_circle;
+    block-size: var.$size_circle;
 
     @include mix.respond_to(min, m_screen) {
         border-radius: 100%;
-        inline-size: calc(map.get(var.$spacing, 80) * 2 + map.get(var.$spacing, 32) + map.get(var.$spacing, 8));
-        block-size: calc(map.get(var.$spacing, 80) * 2 + map.get(var.$spacing, 32) + map.get(var.$spacing, 8));
+
+        inline-size: var.$size_circle_m_screen;
+        block-size: var.$size_circle_m_screen;
     }
 
     &__score {
