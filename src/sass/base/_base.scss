@@ -22,6 +22,8 @@ body {
 
     border-radius: map.get(var.$spacing, 32);
 
+    box-shadow: 0 calc(map.get(var.$spacing, 32) - map.get(var.$special_spacing, 2)) calc(map.get(var.$spacing, 32) * 2 - map.get(var.$special_spacing, 4)) 0 var.$box-shadow;
+
     @include mix.respond_to(min, m_screen) {
         flex-direction: row;
         inline-size: 42.875rem; //necessary to fight fit-content of body, otherwise it shrinks
