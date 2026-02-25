@@ -5,13 +5,11 @@ import "./sass/main.scss"
 import ResultSection from './components/organisms/ResultSection/ResultSection';
 import SummarySection from './components/organisms/SummarySection/SummarySection';
 
-function App() {
+export default function App() {
   return (
-    <div className="result_container">
-      <ResultSection />
-      <SummarySection />
-    </div>
+      <article className="result_container">
+        <ResultSection />
+        <SummarySection />
+      </article>
   )
 }
-
-export default App

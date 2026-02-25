@@ -11,7 +11,7 @@
     letter-spacing: $letter_spacing;
 }
 
-@mixin transition($time, $mode, $prop...) {
+@mixin transition($prop, $time, $mode) {
     @media (prefers-reduced-motion: no-preference) {
         transition: $prop $time $mode;
     }
@@ -22,13 +22,13 @@
 }
 
 @mixin respond_to($minmax, $media) {
-    @if $media ==l_screen {
+    @if $media == l_screen {
         @media screen and (#{$minmax}-width: func.to_rem(1440)) {
             @content;
         }
     }
 
-    @else if $media ==m_screen {
+    @else if $media == m_screen {
         @media screen and (#{$minmax}-width: func.to_rem(768)) {
             @content;
         }
