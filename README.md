@@ -12,7 +12,7 @@ This is a static component built with React showing health metrics.
 
 - Live Site URL: [Result summary component](https://tomduranti.github.io/result_summary_component/)
 
-- ### Built with
+### Built with
 
 - React
 - Storybook
